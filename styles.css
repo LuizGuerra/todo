@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f4f6;
+}
+
+#todo-container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+input[type="text"] {
+    width: calc(72%);
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 12px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    animation: fadeIn 0.5s ease;
+}
+
+li:last-child {
+    margin-bottom: 0;
+}
+
+.delete {
+    background-color: #f44336;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.delete:hover {
+    background-color: #d32f2f;
+}
+
+.task {
+    flex-grow: 1;
+    margin-right: 12px;
+    color: #333;
+}
+
+/* Styles for the checkbox */
+input[type="checkbox"] {
+    display: inline-block; /* Ensure the container takes up only the necessary width */
+    vertical-align: middle; /* Align the container vertically with adjacent elements */
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    min-height: 16px;
+    border: 1px solid #999;
+    border-radius: 3px;
+    margin-right: 8px;
+
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #aaefad;
+    border: 1px solid #4CAF50;
+}
+
+label {
+    inline-size: 300px;
+    overflow-wrap: break-word;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #fff;
+    }
+    #todo-container {
+        background-color: #333;
+        color: #fff;
+    }
+    h2 {
+        color: #fff;
+    }
+    .task {
+        color: #fff;
+    }
+    input[type="text"] {
+        background-color: #333;
+        color: #fff;
+    }
+
+    input[type="text"]::placeholder {
+        color: #999; /* Placeholder color in dark mode */
+    }
+
+    ul li {
+        background-color: #444;
+        color: #fff;
+    }
+
+}
