@@ -1,4 +1,4 @@
-# Browser Todo
+# Todo List (browser) Application
 
 This is a simple html/css/js application of a todo list, using simple pagination by changing the parameters.
 
