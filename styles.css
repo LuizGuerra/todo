@@ -11,7 +11,10 @@ body {
     margin: 0 auto;
     max-width: 900px;
 
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px; 
+
     justify-content: center;
     align-items: top;
 }
@@ -162,7 +165,9 @@ ul li a {
 @media (max-width: 900px) {
     .platform-grid {
         /* flex-direction: column; */
-        flex-wrap: wrap; 
+        /* flex-wrap: wrap;  */
+        grid-template-columns: auto;
+        
     }
     #todo-container {
         margin: 16px 20px;
