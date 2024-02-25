@@ -5,6 +5,18 @@ body {
     background-color: #f3f4f6;
 }
 
+/* Main Div – Should keep everything centered and display items as flex */
+
+.platform-grid {
+    margin: 0 auto;
+    max-width: 900px;
+
+    display: flex;
+    justify-content: center;
+    align-items: top;
+}
+
+
 #todo-container {
     max-width: 400px;
     margin: 20px auto;
@@ -12,6 +24,8 @@ body {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    flex: 1;
 }
 
 h2 {
@@ -19,8 +33,27 @@ h2 {
     color: #333;
 }
 
+.input-n-button-flex {
+    margin-top: 8px;
+}
+
+.input-n-button-flex {
+    display: flex;
+    align-items: top;
+}
+
+.input-n-button-flex input[type="text"] {
+    flex-grow: 1;
+    box-sizing: border-box;
+    margin-right: 16px;
+}
+
+todo-input-input[type="text"] {
+    margin-bottom: 8px;
+}
+
 input[type="text"] {
-    width: calc(72%);
+    /* width: calc(72%); */
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -28,12 +61,8 @@ input[type="text"] {
     font-size: 16px;
 }
 
-todo-input-input[type="text"] {
-    margin-bottom: 8px;
-}
-
 button {
-    padding: 12px 20px;
+    padding: 8px 20px;
     background-color: #4CAF50;
     color: #fff;
     border: none;
@@ -63,6 +92,10 @@ li {
     animation: fadeIn 0.5s ease;
 }
 
+li label {
+    flex-grow: 1;
+}
+
 li:last-child {
     margin-bottom: 0;
 }
@@ -82,12 +115,12 @@ li:last-child {
 }
 
 .task {
-    flex-grow: 1;
+    /* flex-grow: 1; */
     margin-right: 12px;
     color: #333;
 }
 
-/* Styles for the checkbox */
+
 input[type="checkbox"] {
     display: inline-block; /* Ensure the container takes up only the necessary width */
     vertical-align: middle; /* Align the container vertically with adjacent elements */
@@ -111,24 +144,9 @@ input[type="checkbox"]:checked {
     border: 1px solid #4CAF50;
 }
 
+
 label {
-    inline-size: 300px;
     overflow-wrap: break-word;
-}
-
-div form div {
-    margin-top: 8px;
-}
-
-div form div {
-    display: flex;
-    align-items: top;
-}
-
-div form div input[type="text"] {
-    flex-grow: 1;
-    box-sizing: border-box;
-    margin-right: 16px;
 }
 
 .urlListStyle {
@@ -140,18 +158,14 @@ ul li a {
     text-decoration: none;
 }
 
-.platform-grid {
-    margin: 0 auto;
-    max-width: 900px; 
-
-    display: flex;
-    justify-content: center;
-    align-items: top;
-}
 
 @media (max-width: 900px) {
     .platform-grid {
-        flex-direction: column;
+        /* flex-direction: column; */
+        flex-wrap: wrap; 
+    }
+    #todo-container {
+        margin: 16px 20px;
     }
 }
 
@@ -180,5 +194,4 @@ ul li a {
         background-color: #444;
         color: #fff;
     }
-
 }
