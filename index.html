@@ -10,24 +10,29 @@
 
 <body>
 
-  <div id="todo-container">
-    <h2>To-Do App</h2>
-    <input class="todo-input-input" type="text" id="todo-input" placeholder="Enter your task">
-    <button onclick="addTodo()">Add Task</button>
-    <ul id="todo-list"></ul>
-  </div>
+  <div class="platform-grid">
 
-  <div id="todo-container">
-    <form id="parameterForm">    
-      <label for="paramInput">Access another list:</label>
-      <p style="font-weight: 100;font-size: 12px; color: gray;padding: 4px 0 0 0;margin: 0;">Create new list or access previously created</label>
-      <p style="font-weight: 100;font-size: 12px; color: gray;padding: 0 0 4px 0;margin: 0;">Clicking go with the input box empty will bring you back to the root page</label>
-      <div>
-        <input type="text" id="paramInput" name="paramInput">
-        <button type="submit">Go</button>
-      </div>
-    </form>
-    <ul class="urlListStyle" id="urlList"></ul>
+    <div class="first-div" id="todo-container">
+      <h2>To-Do App</h2>
+      <input class="todo-input-input" type="text" id="todo-input" placeholder="Enter your task">
+      <button onclick="addTodo()">Add Task</button>
+      <ul id="todo-list"></ul>
+    </div>
+  
+    <div class="second-div" id="todo-container">
+      <form id="parameterForm">    
+        <label for="paramInput">Access another list:</label>
+        <p style="font-weight: 100;font-size: 12px; color: gray;padding: 4px 0 0 0;margin: 0;">Create new list or access previously created</label>
+        <p style="font-weight: 100;font-size: 12px; color: gray;padding: 0 0 4px 0;margin: 0;">Clicking go with the input box empty will bring you back to the root page</label>
+        <div>
+          <input type="text" id="paramInput" name="paramInput">
+          <button type="submit">Go</button>
+        </div>
+      </form>
+      <ul class="urlListStyle" id="urlList"></ul>
+    </div>
+  
+
   </div>
 
   <script src="script.js"> </script>

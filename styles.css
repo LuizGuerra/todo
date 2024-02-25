@@ -135,6 +135,26 @@ div form div input[type="text"] {
     cursor: pointer;
 }
 
+ul li a {
+    color: #272727;
+    text-decoration: none;
+}
+
+.platform-grid {
+    margin: 0 auto;
+    max-width: 900px; 
+
+    display: flex;
+    justify-content: center;
+    align-items: top;
+}
+
+@media (max-width: 900px) {
+    .platform-grid {
+        flex-direction: column;
+    }
+}
+
 @media (prefers-color-scheme: dark) {
     body {
         background-color: #121212;
@@ -144,10 +164,7 @@ div form div input[type="text"] {
         background-color: #333;
         color: #fff;
     }
-    h2 {
-        color: #fff;
-    }
-    .task {
+    h2, ul li a, .task {
         color: #fff;
     }
     input[type="text"] {
