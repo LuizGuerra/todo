@@ -22,11 +22,14 @@ h2 {
 input[type="text"] {
     width: calc(72%);
     padding: 12px;
-    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
     font-size: 16px;
+}
+
+todo-input-input[type="text"] {
+    margin-bottom: 8px;
 }
 
 button {
@@ -111,6 +114,25 @@ input[type="checkbox"]:checked {
 label {
     inline-size: 300px;
     overflow-wrap: break-word;
+}
+
+div form div {
+    margin-top: 8px;
+}
+
+div form div {
+    display: flex;
+    align-items: top;
+}
+
+div form div input[type="text"] {
+    flex-grow: 1;
+    box-sizing: border-box;
+    margin-right: 16px;
+}
+
+.urlListStyle {
+    cursor: pointer;
 }
 
 @media (prefers-color-scheme: dark) {
