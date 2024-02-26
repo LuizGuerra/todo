@@ -146,23 +146,14 @@ todoInput.addEventListener('keypress', function (event) {
 
 
 
-// document.getElementById('parameterForm').addEventListener('submit', function (event) {
-//   event.preventDefault(); // Prevent form submission
 
-//   const inputValue = document.getElementById('paramInput').value.trim().toLowerCase;
-//   const baseUrl = window.location.href.split('?')[0]; // Get the base URL without parameters
-
-//   if (inputValue) {
-//     const newUrl = `${baseUrl}?key=${encodeURIComponent(inputValue)}`.toLowerCase();
-//     window.location.href = newUrl; // Redirect to the new URL with the parameter
-//   } else {
-//     window.location.href = baseUrl;
-//   }
-// });
 const urlList = document.getElementById('urlList');
 
 // Load URLs from localStorage on page load
 loadUrlsFromLocalStorage();
+
+// Updates page title if on a subpage
+updatesTitle();
 
 // Add event listener to the form
 document.getElementById('parameterForm').addEventListener('submit', function (event) {
@@ -192,6 +183,28 @@ function loadUrlsFromLocalStorage() {
     addUrlToList(url, capitalize(paramValue));
   });
 }
+
+function updatesTitle() {
+    // Get the URL parameters
+  const params = new URLSearchParams(window.location.search);
+
+  // Check if the 'key' parameter exists in the URL
+  if (params.has('key')) {
+      // Get the value of the 'key' parameter
+      const keyValue = capitalize(params.get('key')) + ' – To Do';
+      
+      // Update the title of the page with the value of the 'key' parameter
+      // document.title = `To Do: ${keyValue}`;
+      // document.title = `${keyValue} – To Do`;
+      document.title = keyValue;
+
+      const pageTitleElement = document.getElementById('page-title');
+      if (pageTitleElement) {
+          pageTitleElement.textContent = keyValue;
+      }
+  }
+}
+
 
 function capitalize(s) {
   return `${s.charAt(0).toUpperCase()}${s.substring(1)}`
