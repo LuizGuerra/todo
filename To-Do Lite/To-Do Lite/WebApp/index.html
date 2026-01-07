@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div class="platform-grid">
+
+    <div id="todo-container">
+      <h2 id="page-title">To Do App</h2>
+      <div class="input-n-button-flex">
+        <input class="todo-input-input" type="text" id="todo-input" placeholder="Enter your task">
+        <button onclick="addTodo()">Add</button>
+      </div>
+      <ul id="todo-list"></ul>
+    </div>
+  
+    <div id="todo-container">
+      <form id="parameterForm">    
+        <label for="paramInput">Access another list:</label>
+        <p style="font-weight: 100;font-size: 12px; color: gray;padding: 4px 0 0 0;margin: 0;">Create or access a previously created list</label>
+        <p style="font-weight: 100;font-size: 12px; color: gray;padding: 0 0 4px 0;margin: 0;">Clicking "Go" with the input box empty will bring you back to the root page</label>
+        <div class="input-n-button-flex">
+          <input type="text" id="paramInput" name="paramInput">
+          <button type="submit">Go</button>
+        </div>
+      </form>
+      <ul class="urlListStyle" id="urlList"></ul>
+    </div>
+  
+
+  </div>
+
+  <script src="script.js"> </script>
+
+</body>
+
+</html>
